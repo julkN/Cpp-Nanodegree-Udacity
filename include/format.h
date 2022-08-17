@@ -3,8 +3,11 @@
 
 #include <string>
 
+
+
 namespace Format {
 std::string ElapsedTime(long times);  // TODO: See src/format.cpp
+std::string Num2String(const long numb);
 };                                    // namespace Format
 
 #endif
