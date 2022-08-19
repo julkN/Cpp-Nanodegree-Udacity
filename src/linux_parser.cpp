@@ -206,9 +206,10 @@ string LinuxParser::Ram(int pid) {
   if(filestream.is_open()){
     while (std::getline(filestream, line))
     {
+      std::replace(line.begin(), line.end(), ':', ' ');
       std::istringstream linestream(line);
       linestream>>key;
-      if(key == "VmSize:"){
+      if(key == "VmSize"){
         linestream >> value;
       }
     }
